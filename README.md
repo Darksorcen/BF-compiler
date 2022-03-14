@@ -1,6 +1,5 @@
 ## BF compiler !
-### A simple BF compiler written in C++ that produce C code. 
-
+### A simple BF compiler written in C++ that produces C code. 
 ## Install
 #### -Clone the repository
 #### -Make an executable of `bf_compiler.cpp` with any standard compiler (g++, clang, mingw...)
@@ -8,3 +7,6 @@
 ####  1: the name of the brainfuck file
 ####  2: the name of the C file
 #### -After that you got a nice C file and you can compile it !
+###
+###  Exemple:
+##   ```$ ./bf_compiler example.bf example.c```
