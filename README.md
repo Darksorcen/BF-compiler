@@ -9,4 +9,4 @@
 #### -After that you got a nice C file and you can compile it !
 ###
 ###  Exemple:
-##   ```$ ./bf_compiler example.bf example.c```
+####   ```./bf_compiler example.bf example.c```
