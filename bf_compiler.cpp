@@ -19,19 +19,20 @@ int main(int argc, char **argv)
     std::string test_str = "++>+++<[-]";
     std::string code = "#include \"stdio.h\"\nint main()\n{\n    char array[30000] = {0};\n    unsigned char *ptr = array;\n";
 
-    if (argv[1] == NULL)
+    if (argv[1] == NULL || argv[2] == NULL)
     {
         std::cout << "No files given" << std::endl;
         return 0;
     }
-    else if (argc > 2)
+    else if (argc > 3)
     {
         std::cout << "Too many arguments" << std::endl;
         return 0;
     }
     std::string line;
-    std::ifstream file { argv[1] };
-    while (std::getline(file >> std::ws, line))
+    std::ifstream bf_file { argv[1] };
+    std::cout << argv[1] << std::endl;
+    while (std::getline(bf_file >> std::ws, line))
     {
         for (auto character : line)
         {
@@ -39,6 +40,7 @@ int main(int argc, char **argv)
         }
     }
     code += "    return 0;\n}";
-    std::cout << code << std::endl;
+    std::ofstream c_file { argv[2] };
+    c_file << code;
     return 0;
 }
